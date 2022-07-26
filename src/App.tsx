@@ -1,4 +1,3 @@
-import { Styles } from './App.styles';
 
 import { logo } from 'assets/images';
 import { Logo } from 'ui/_components/Logo';
