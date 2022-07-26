@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 const Image = styled('img')`
   cursor: pointer;
-  height: 40vmin;
   transition: transform 0.1s ease-in;
   user-select: none;
+  width: 10vmin;
 
   &:active {
     transform: scale(0.9);
