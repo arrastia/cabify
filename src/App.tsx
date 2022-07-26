@@ -1,19 +1,24 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import { logo } from 'assets/images';
-import { Logo } from 'ui/_components/Logo';
+import { GlobalStyles } from 'Global.styles';
+
+import { routes } from 'configuration/routes';
+
+import { Layout } from 'ui/_components/Layout';
+
+import { ShoppingCart } from 'ui/ShoppingCart';
 
 export function App() {
   return (
-    <Styles.App>
-      <Styles.Header>
-        <Logo />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <Styles.Link href="https://reactjs.org" rel="noopener noreferrer" target="_blank">
-          Learn React
-        </Styles.Link>
-      </Styles.Header>
-    </Styles.App>
+    <>
+      <GlobalStyles />
+      <BrowserRouter>
+        <Routes>
+          <Route element={<Layout />} path={routes.SHOPPING_CART}>
+            <Route element={<ShoppingCart />} index={true} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
