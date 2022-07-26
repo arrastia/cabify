@@ -1,12 +1,13 @@
 import { Styles } from './App.styles';
 
 import { logo } from 'assets/images';
+import { Logo } from 'ui/_components/Logo';
 
 export function App() {
   return (
     <Styles.App>
       <Styles.Header>
-        <Styles.Logo alt="logo" className="App-logo" src={logo} />
+        <Logo />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
