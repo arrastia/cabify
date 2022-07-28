@@ -1,16 +1,25 @@
+import { Styles } from './ShoppingCart.styles';
+
 import { Button } from 'ui/_components/Button';
-import { Logo } from 'ui/_components/Logo';
+import { QuantitySelector } from 'ui/_components/QuantitySelector';
+import { Table } from 'ui/_components/Table';
+import { ProductList } from 'ui/_components/ProductList';
+import { Divider } from 'ui/_components/Divider/Divider';
+import { ProductService } from 'core/services/Product';
+import { useEffect } from 'react';
+import { useRecoilValue } from 'recoil';
+import { productState } from 'ui/_tools/Stores/CheckoutStore';
 
 export const ShoppingCart = () => {
   return (
-    <>
-      <h2>HOLAAA</h2>
-      <div />
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sodales semper elit sit amet interdum. Praesent volutpat sed elit vel consectetur.
-        Nulla tempus tincidunt ex, sit amet semper ipsum imperdiet varius. In rutrum aliquam nisl, sagittis faucibus felis bibendum id.
+    <Styles.View>
+      <h1>Shopping cart</h1>
+      <Divider />
+      <ProductList></ProductList>
+      {/* <p>
+        
       </p>
-      <Button />
-    </>
+      <QuantitySelector></QuantitySelector> */}
+    </Styles.View>
   );
 };
