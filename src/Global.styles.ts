@@ -17,10 +17,9 @@ export const GlobalStyles = createGlobalStyle`
       background-size: cover;
       display: flex;
       flex-direction: column;
-      font-family: 'Roboto', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+      font-family: Avenir, 'Roboto', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
       height: 100vh;
       justify-content: center;
-      margin: 0;
       margin: 0;
       transition: background-color 300ms ease-in-out;
       width: 100%;
@@ -30,13 +29,12 @@ export const GlobalStyles = createGlobalStyle`
 
     h1 {
       color: #1a1a38;
-      font-family: Avenir;
       font-size: 1.5rem;
       line-height: 32px;
+      margin: 0;
     }
 
     h2 {
-      font-family: Avenir;
       font-size: 18px;
       font-weight: 900;
       letter-spacing: -0.01em;
@@ -45,7 +43,6 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     p {
-      font-family: Avenir;
       font-size: 13px;
       font-weight: 400;
       letter-spacing: -0.01em;
