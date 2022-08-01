@@ -2,14 +2,14 @@ import { Styles } from './Sidebar.styles';
 
 import { Button } from 'ui/components/Button';
 import { Divider } from 'ui/components/Divider';
-import { ProductSummary } from 'ui/components/ProductSummary';
+import { Summary } from 'ui/components/Summary';
 
 export const Sidebar = () => {
   return (
     <Styles.Sidebar as="aside" isVisible={true}>
       <h2>Order summary</h2>
       <Divider />
-      <ProductSummary />
+      <Summary />
       <Divider />
 
       <p>
