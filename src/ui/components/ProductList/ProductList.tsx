@@ -3,10 +3,10 @@ import { useRecoilValue } from 'recoil';
 import { Styles } from './ProductList.styles';
 
 import { ProductDetails } from './components/ProductDetails';
-import { QuantitySelector } from '../QuantitySelector';
+import { ProductItem } from './components/ProductItem';
+import { QuantitySelector } from './components/QuantitySelector';
 
 import { productState } from 'ui/stores/CheckoutStore';
-import { ProductItem } from './components/ProductItem';
 
 export const ProductList = () => {
   const products = useRecoilValue(productState);
@@ -26,7 +26,7 @@ export const ProductList = () => {
           id={item.id}
           key={item.id}
           price={item.price}
-          quantitySelector={<QuantitySelector item={item} productType={item.name} />}
+          quantitySelector={<QuantitySelector productCategory={item.category} />}
         />
       ))}
     </Styles.Table>
