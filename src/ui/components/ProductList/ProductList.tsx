@@ -13,22 +13,26 @@ export const ProductList = () => {
 
   return (
     <Styles.Table as="table">
-      <tr>
-        <th>Product details</th>
-        <th>Quantity</th>
-        <th>Price</th>
-        <th>Total</th>
-      </tr>
+      <thead>
+        <tr>
+          <th>Product details</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Total</th>
+        </tr>
+      </thead>
 
-      {products.map(item => (
-        <ProductItem
-          details={<ProductDetails code={item.code} name={item.name} src={item.picture} />}
-          id={item.id}
-          key={item.id}
-          price={item.price}
-          quantitySelector={<QuantitySelector productCategory={item.category} />}
-        />
-      ))}
+      <tbody>
+        {products.map(item => (
+          <ProductItem
+            details={<ProductDetails code={item.code} name={item.name} src={item.picture} />}
+            id={item.id}
+            key={item.id}
+            price={item.price}
+            quantitySelector={<QuantitySelector productCategory={item.category} />}
+          />
+        ))}
+      </tbody>
     </Styles.Table>
   );
 };
